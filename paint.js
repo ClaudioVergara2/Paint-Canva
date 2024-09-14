@@ -48,7 +48,7 @@ document.getElementById('colorPicker').addEventListener('input', (e) => {
 });
 document.getElementById('brushSize').addEventListener('input', (e) => {
     brushSize = e.target.value;
-    document.querySelector('label[for="brushSize"]').textContent = `Tamaño del Pincel: ${brushSize}`;
+    document.getElementById('brushSizeLabel').textContent = `Tamaño del Pincel: ${brushSize}`;
 });
 
 canvas.addEventListener('mousedown', startPosition);

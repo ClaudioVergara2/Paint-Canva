@@ -2,10 +2,13 @@
     border: 1px solid black;
     display: block;
     margin: 0 auto;
-    cursor: crosshair;
 }
 
 #controls {
-    text-align: center;
+    margin-top: 10px;
+}
+
+#brushSizeLabel {
+    display: block;
     margin-top: 10px;
 }
