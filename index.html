@@ -9,16 +9,43 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center my-4">Aplicación de Paint</h1>
+        <!-- <h1 class="text-center my-4">Aplicación de Paint</h1> -->
+        <br><br><br>
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-8 text-center">
+                <div class="color-palette">
+                    <div class="color-box">
+                        <button type="button" class="btn btn-color" style="background-color: #ff0000;" data-color="#ff0000" aria-label="Rojo"></button>
+                    </div>
+                    <div class="color-box">
+                        <button type="button" class="btn btn-color" style="background-color: #00ff00;" data-color="#00ff00" aria-label="Verde"></button>
+                    </div>
+                    <div class="color-box">
+                        <button type="button" class="btn btn-color" style="background-color: #0000ff;" data-color="#0000ff" aria-label="Azul"></button>
+                    </div>
+                    <div class="color-box">
+                        <button type="button" class="btn btn-color" style="background-color: #ffff00;" data-color="#ffff00" aria-label="Amarillo"></button>
+                    </div>
+                    <div class="color-box">
+                        <button type="button" class="btn btn-color" style="background-color: #ff00ff;" data-color="#ff00ff" aria-label="Rosa"></button>
+                    </div>
+                    <div class="color-box">
+                        <button type="button" class="btn btn-color" style="background-color: #00ffff;" data-color="#00ffff" aria-label="Cian"></button>
+                    </div>
+                    <div class="color-box">
+                        <button type="button" class="btn btn-color" style="background-color: #000000;" data-color="#000000" aria-label="Negro"></button>
+                    </div>
+                    <div class="color-box">
+                        <button type="button" class="btn btn-color" style="background-color: #ffffff;" data-color="#ffffff" aria-label="Blanco"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <canvas id="canvas" width="800" height="600" class="border"></canvas>
                 <div id="controls" class="text-center mt-3">
                     <button id="clear" type="button" class="btn btn-danger">Limpiar</button>
-                    <div class="form-group mt-2">
-                        <label for="colorPicker">Color del Pincel</label>
-                        <input type="color" id="colorPicker" class="form-control">
-                    </div>
                     <div class="form-group mt-2">
                         <label for="brushSize">Tamaño del Pincel</label>
                         <input type="range" id="brushSize" min="1" max="20" value="5" class="form-control-range">
