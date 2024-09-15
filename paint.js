@@ -2,7 +2,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let painting = false;
-let brushColor = '#000000'; // Color predeterminado
+let brushColor = '#000000';
 let brushSize = 5;
 
 function startPosition(e) {
@@ -20,13 +20,9 @@ function draw(e) {
     ctx.lineWidth = brushSize;
     ctx.lineCap = 'round';
     ctx.strokeStyle = brushColor;
-
-    // Obtener las coordenadas correctas del canvas
     const rect = canvas.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-
-    // Dibujar
     ctx.lineTo(x, y);
     ctx.stroke();
     ctx.beginPath();
@@ -45,7 +41,6 @@ document.getElementById('brushSize').addEventListener('input', (e) => {
     document.getElementById('brushSizeLabel').innerText = `Tamaño del Pincel: ${brushSize}`;
 });
 
-// Funcionalidad para cambiar el color del pincel al hacer clic en un botón
 const colorButtons = document.querySelectorAll('.btn-color');
 colorButtons.forEach(button => {
     button.addEventListener('click', (e) => {
